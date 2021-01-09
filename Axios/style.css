@@ -14,9 +14,6 @@ body {
   width: 60%;
   margin: 20px auto;
   text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 .app-header > img {

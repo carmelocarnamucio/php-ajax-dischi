@@ -41,4 +41,17 @@
         ]
     ];
 
-    echo json_encode($database);
+    $author = $_GET['author'];
+
+    $cd = [];
+
+    for ($i=0; $i < count($database); $i++) {
+
+        if ($database[$i]['author'] == $author) {
+            $cd[] = $database[$i];
+        } else if ($author == 'all') {
+            $cd[] = $database[$i];
+        }
+    }
+
+    echo json_encode($cd);

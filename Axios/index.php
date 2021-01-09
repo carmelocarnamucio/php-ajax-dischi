@@ -12,19 +12,27 @@
 
     <header class='app-header'>
       <img src="img/logo.png" alt="">
+
     </header>
 
     <div id='app'>
-        <ul class='cds-list'>
-          <li class='cd' v-for='cd in cds'>
-            <div class='wrap-image'>
-              <img :src='cd.poster' :alt='cd.title'>
-            </div>
-            <h3 class='title'>{{cd.title}}</h3>
-            <div class='author'>{{cd.author}}</div>
-            <div class='year'>{{cd.year}}</div>
-          </li>
-        </ul>
+
+      <span>Filter by artist:</span>
+
+      <button v-for="author in authors" @click="album(author)">{{author}}</button>
+
+      <button @click="album('all')">All Artists</button>
+
+      <ul class='cds-list'>
+        <li class='cd' v-for='cd in cds'>
+          <div class='wrap-image'>
+            <img :src='cd.poster' :alt='cd.title'>
+          </div>
+          <h3 class='title'>{{cd.title}}</h3>
+          <div class='author'>{{cd.author}}</div>
+          <div class='year'>{{cd.year}}</div>
+        </li>
+      </ul>
     </div>
 
     <script src="script.js"></script>
