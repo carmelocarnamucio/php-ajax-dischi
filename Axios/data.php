@@ -47,9 +47,9 @@
 
     for ($i=0; $i < count($database); $i++) {
 
-        if ($database[$i]['author'] == $author) {
+        if ($database[$i]['author'] === $author) {
             $cd[] = $database[$i];
-        } else if ($author == 'all') {
+        } else if ($author === 'all') {
             $cd[] = $database[$i];
         }
     }

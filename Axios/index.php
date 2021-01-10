@@ -10,10 +10,9 @@
   </head>
   <body>
 
-    <header class='app-header'>
+    <nav class='app-header'>
       <img src="img/logo.png" alt="">
-
-    </header>
+    </nav>
 
     <div id='app'>
 
